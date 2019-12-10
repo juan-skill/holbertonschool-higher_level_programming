@@ -16,12 +16,17 @@ int check_cycle(listint_t *head)
 
 	tmp1 = tmp2 = head;
 
-	while (tmp1 != NULL && tmp2 != NULL && tmp2->next->next != NULL)
+	while (tmp1 != NULL && tmp2 != NULL)
 	{
-		tmp1 = tmp1->next;
 		tmp2 = tmp2->next->next;
 		if (tmp1 == tmp2)
 			return (1);
+		if (tmp2 == NULL)
+			return (0);
+		tmp2 = tmp2->next->next;
+		if (tmp1 == tmp2)
+			return (1);
+		tmp1 = tmp1->next;
 	}
 
 	return (0);
