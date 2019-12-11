@@ -12,7 +12,7 @@ int check_cycle(listint_t *head)
 
 	tmp1 = tmp2 = NULL;
 
-	if (head == NULL)
+	if (!head)
 		return (0);
 
 	tmp1 = tmp2 = head;
