@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def fizzbuzz():
     i = 1
     while(i <= 101):
