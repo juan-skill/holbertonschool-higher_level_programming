@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def fizzbuzz():
     i = 1
-    while(i <= 101):
+    while(i <= 100):
         if (i % 15 == 0):
             print("FizzBuzz", end=' ')
         elif (i % 3 == 0):
