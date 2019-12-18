@@ -8,12 +8,11 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *ptr_h, *ptr_t, *ptr_next;
-	int i, len, b_len;
+	listint_t *ptr_h, *ptr_t;
+	int i, len, len2;
 
-	len = b_len = 0;
+	len = len2 = 0;
 	ptr_h = ptr_t = *head;
-	ptr_next = NULL;
 
 	if (head != NULL || *head != NULL)
 		return (1);
@@ -21,26 +20,26 @@ int is_palindrome(listint_t **head)
 	for (; ptr_t->next != NULL; len++)
 		ptr_t = ptr_t->next;
 
-	b_len = len;
-	ptr_next = ptr_t;
-	ptr_t->next = *head;
 
+	ptr_t->next = *head; /* pos = 0 */
+	/* ptr_t            pos = len*/
+	len2 = len;
 	i = 0;
-	while (i < len / 2)
+	while (i <= len / 2)
 	{
 		if (ptr_h->n == ptr_t->n)
 		{
 			ptr_h = ptr_h->next;
-			while (b_len-- > 0)
+			while (len2-- > 0)
 				ptr_t = ptr_t->next;
 		}
 		else
 			return (0);
 
-		b_len = len;
+		len2 = len;
 		i += 1;
 	}
-	ptr_next->next = NULL;
+
 
 	return (1);
 }
