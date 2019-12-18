@@ -8,7 +8,7 @@ def max_integer(list=[]):
 
     max = list[0]
     for item in list:
-        if item >= max:
+        if item > max:
             max = item
 
     return max
