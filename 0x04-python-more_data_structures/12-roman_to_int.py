@@ -3,10 +3,10 @@
 
 def roman_to_int(roman_string):
 
-    number = 0
-    str_roman = roman_string + ' '
+    if type(roman_string) is str or roman_string:
 
-    if type(roman_string) is str or not roman_string:
+        number = 0
+        str_roman = roman_string + ' '
 
         i = 0
         while (i < len(str_roman)):
@@ -43,5 +43,5 @@ def roman_to_int(roman_string):
 
             i += 1
         return number
-
-    return 0
+    else:
+        return 0
