@@ -3,7 +3,7 @@
 
 def roman_to_int(roman_string):
 
-    if isinstance(roman_string, str) is True and roman_string != None:
+    if type(roman_string) is str and roman_string:
 
         number = 0
         str_roman = roman_string + ' '
@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
                     number += 1
 
             elif str_roman[i] == 'V':
-                    number += 5
+                number += 5
 
             elif str_roman[i] == 'X':
                 if str_roman[i + 1] == 'L' or str_roman[i + 1] == 'C':
