@@ -7,7 +7,7 @@ last = (-1) * last if number < 0 else last
 
 print("Last digit of {} is {}".format(number, last), end=' ')
 if last > 5:
-    print("greater than 5")
+    print("and is greater than 5")
 elif last == 0:
     print("and is 0")
 else:
