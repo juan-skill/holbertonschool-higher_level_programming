@@ -1,0 +1,58 @@
+The ``say_my_name`` module
+======================
+
+
+Import module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+typicall correct cases:
+
+
+>>> say_my_name("Betty", "Holberton")
+My name is Betty Holberton
+
+>>> say_my_name('Thompson')
+My name is Thompson 
+
+>>> say_my_name("Betty", 'Holberton School')
+My name is Betty Holberton School
+
+
+incorrect cases:
+
+>>> say_my_name("Holberton", "School", "98")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(('Puff', 'Plum'), "Pot")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Instant", 98)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(98)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(1337, 98)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(None, 98)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("School", (2, 3))
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name((1337, 98), "Holberton")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
