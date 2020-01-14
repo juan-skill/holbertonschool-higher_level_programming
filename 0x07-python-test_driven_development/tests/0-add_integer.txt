@@ -1,0 +1,76 @@
+The Add_Integer Module:
+=======================
+
+
+Import file
+>>> add_integer = __import__("0-add_integer").add_integer
+
+
+typical correct cases:
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(2, -2)
+0
+
+>>> add_integer(-80, -2)
+-82
+
+>>> add_integer(20.4, -2)
+18
+
+>>> add_integer(33, -10.5)
+23
+
+
+
+incorrect cases:
+
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("Holberton", -8)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("Holberton", "School")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("-58", 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None, 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(1, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer([1, 2, 3], 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(-5, [1, 2, 3])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer({5: "School"}, 0)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(0, {3: "Holberton"})
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
