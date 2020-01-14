@@ -8,6 +8,10 @@ Import file
 
 typical correct cases:
 
+If only a is provided, b will be 98.
+>>> add_integer(2)
+100
+
 >>> add_integer(1, 2)
 3
 
