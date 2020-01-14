@@ -34,14 +34,14 @@ def matrix_divided(matrix, div):
 
             if not isinstance(row, list):
                 raise TypeError('matrix must be a matrix (list of lists) of '
-                        'integers/floats')
+                                'integers/floats')
 
             new_matrix.append(row[:])
             for val, item in enumerate(row):
 
                 if not isinstance(item, (int, float)):
-                    raise TypeError('matrix must be a matrix (list of lists) of'
-                        ' integers/floats')
+                    raise TypeError('matrix must be a matrix (list of lists) '
+                                    'of integers/floats')
                 new_matrix[count][val] = round(item / div, 2)
     except:
         raise
