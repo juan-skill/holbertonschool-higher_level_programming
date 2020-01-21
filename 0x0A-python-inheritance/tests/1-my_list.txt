@@ -1,0 +1,45 @@
+Import module
+>>> MyList = __import__('1-my_list').MyList
+
+
+Typical correct cases:
+
+>>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(1)
+>>> my_list
+[1]
+
+>>> my_list.append(8)
+>>> my_list.append(5)
+>>> my_list
+[1, 8, 5]
+
+>>> my_list.print_sorted()
+[1, 5, 8]
+
+>>> my_list.append('b')
+>>> my_list
+[1, 8, 5, 'b']
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: unorderable types: str() < int()
+
+>>> my_list2 = MyList()
+>>> my_list2.append(8)
+>>> my_list2.append(-22)
+>>> my_list2.append(1)
+>>> my_list2.append(0)
+>>> my_list2
+[8, -22, 1, 0]
+
+>>> my_list2.print_sorted()
+[-22, 0, 1, 8]
